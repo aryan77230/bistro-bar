@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1A0B0E" />
+    <title>Bistro Bar — Craft plates. Low light. Loud flavor.</title>
+    <meta
+      name="description"
+      content="A neighborhood bistro built around seasonal plates and a craft cocktail program. Durg, Chhattisgarh."
+    />
+    <!-- Inline the base background colour so the body is already dark
+         before styles.css parses. Otherwise the browser paints a white
+         flash between HTML parse and CSS apply, which makes the page
+         loader look like it briefly disappears on refresh. -->
+    <style>
+      html,
+      body,
+      #root {
+        background-color: #1a0b0e;
+        color: #f2e8d7;
+      }
+    </style>
+  </head>
+  <body class="bg-base text-ink antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

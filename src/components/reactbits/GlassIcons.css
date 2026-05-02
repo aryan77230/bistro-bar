@@ -1,0 +1,162 @@
+/* GlassIcons — base styles from reactbits.dev (JS+CSS variant) */
+
+.icon-btns {
+  display: grid;
+  grid-gap: 5em;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  padding: 3em 0;
+  overflow: visible;
+}
+
+.icon-btn {
+  background-color: transparent;
+  outline: none;
+  position: relative;
+  width: 4.5em;
+  height: 4.5em;
+  perspective: 24em;
+  transform-style: preserve-3d;
+  -webkit-tap-highlight-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-btn__back,
+.icon-btn__front,
+.icon-btn__label {
+  transition:
+    opacity 0.3s cubic-bezier(0.83, 0, 0.17, 1),
+    transform 0.3s cubic-bezier(0.83, 0, 0.17, 1),
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.icon-btn__back,
+.icon-btn__front {
+  border-radius: 1.25em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-btn__back {
+  box-shadow: 0.5em -0.5em 0.75em hsla(223, 10%, 10%, 0.15);
+  display: block;
+  transform: rotate(15deg);
+  transform-origin: 100% 100%;
+  will-change: transform;
+}
+
+.icon-btn__front {
+  background-color: hsla(0, 0%, 100%, 0.15);
+  box-shadow: 0 0 0 0.1em hsla(0, 0%, 100%, 0.3) inset;
+  backdrop-filter: blur(0.75em);
+  -webkit-backdrop-filter: blur(0.75em);
+  display: flex;
+  transform-origin: 80% 50%;
+  will-change: transform;
+}
+
+.icon-btn__icon {
+  margin: auto;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn__label {
+  font-size: 1em;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 2;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  transform: translateY(0);
+}
+
+.icon-btn:focus-visible .icon-btn__back,
+.icon-btn:hover .icon-btn__back {
+  transform: rotate(25deg) translate3d(-0.5em, -0.5em, 0.5em);
+}
+
+.icon-btn:focus-visible .icon-btn__front,
+.icon-btn:hover .icon-btn__front {
+  transform: translate3d(0, 0, 2em);
+}
+
+.icon-btn:focus-visible .icon-btn__label,
+.icon-btn:hover .icon-btn__label {
+  opacity: 1;
+  transform: translateY(20%);
+}
+
+@media (min-width: 768px) {
+  .icon-btns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------------------------------------------------------- */
+/* Date-picker variant — when a parent element passes className=
+   "date-picker-glass" we override the geometry so 14 dates fit in a
+   tight grid and the date stack (day/number/month) renders inside the
+   glass front. Selected dates get a stronger amber tint. */
+
+.icon-btns.date-picker-glass {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.7em;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+}
+@media (min-width: 640px) {
+  .icon-btns.date-picker-glass {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+.icon-btns.date-picker-glass .icon-btn {
+  width: 100%;
+  height: 5.5em;
+}
+
+/* Allow the stacked date content to fill the glass front */
+.icon-btns.date-picker-glass .icon-btn__icon {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hide the floating label — we use a visible date stack instead */
+.icon-btns.date-picker-glass .icon-btn__label {
+  display: none;
+}
+
+/* The glass front in date-picker mode keeps text readable on dark bg */
+.icon-btns.date-picker-glass .icon-btn__front {
+  background-color: rgba(245, 231, 208, 0.06);
+  box-shadow: 0 0 0 1px rgba(245, 231, 208, 0.18) inset;
+  color: #F5E7D0;
+}
+
+/* Selected date: square the back panel and brighten the front */
+.icon-btn.is-selected .icon-btn__back {
+  transform: rotate(0deg);
+}
+.icon-btn.is-selected .icon-btn__front {
+  background-color: rgba(212, 165, 96, 0.35);
+  box-shadow: 0 0 0 1.5px rgba(212, 165, 96, 0.85) inset;
+  color: #1A0B0E;
+}
+.icon-btn.is-selected:hover .icon-btn__back,
+.icon-btn.is-selected:focus-visible .icon-btn__back {
+  transform: rotate(8deg) translate3d(-0.3em, -0.3em, 0.3em);
+}

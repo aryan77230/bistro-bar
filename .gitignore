@@ -1,0 +1,30 @@
+# --- Secrets & local config ---
+keys.txt
+.env
+.env.local
+.env.*.local
+.claude/
+.vercel/
+
+# --- Dependencies ---
+node_modules/
+
+# --- Build output ---
+dist/
+build/
+*.tsbuildinfo
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# --- Test coverage ---
+coverage/
+.nyc_output/
+
+# --- Misc ---
+.tmp/
+.cache/

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="color-scheme" content="dark">
+<title>See you tomorrow at Bistro Bar</title>
+<style>
+  body{margin:0;padding:0;background:#0d0608;}
+  table{border-collapse:collapse;border-spacing:0;}
+  img{display:block;border:0;outline:none;text-decoration:none;}
+  a{color:#D4A560;text-decoration:none;}
+  @media (max-width:620px){
+    .card{width:100%!important;border-radius:0!important;}
+    .px-lg{padding-left:24px!important;padding-right:24px!important;}
+    .h1{font-size:30px!important;line-height:1.1!important;}
+  }
+</style>
+</head>
+<body style="margin:0;padding:0;background:#0d0608;font-family:'Helvetica Neue',Arial,sans-serif;color:#C9B79B;">
+  <span style="display:none;visibility:hidden;opacity:0;color:transparent;height:0;width:0;font-size:1px;line-height:1px;mso-hide:all;">Reminder — your table is booked for tomorrow at {{contact.booking_time}}.</span>
+
+  <table role="presentation" width="100%" bgcolor="#0d0608" cellpadding="0" cellspacing="0">
+    <tr><td align="center" style="padding:40px 20px;">
+      <table role="presentation" class="card" width="600" bgcolor="#1A0B0E" cellpadding="0" cellspacing="0" style="border:1px solid rgba(212,165,96,0.3);border-radius:20px;overflow:hidden;">
+
+        <tr><td align="center" style="padding:40px 24px 6px 24px;">
+          <span style="font-family:Georgia,'Playfair Display',serif;font-size:28px;font-style:italic;color:#F5E7D0;letter-spacing:1px;">Bistro&nbsp;Bar</span>
+        </td></tr>
+        <tr><td align="center" style="padding:0 24px 28px 24px;">
+          <span style="font-family:'Courier New',monospace;font-size:10px;letter-spacing:4px;color:#D4A560;">EST&nbsp;·&nbsp;2024&nbsp;·&nbsp;DURG</span>
+        </td></tr>
+
+        <tr><td class="px-lg" style="padding:8px 56px 16px 56px;">
+          <h1 class="h1" style="margin:0;font-family:Georgia,'Playfair Display',serif;font-size:40px;font-weight:300;font-style:italic;line-height:1.05;color:#F5E7D0;">See you tomorrow.</h1>
+        </td></tr>
+
+        <tr><td class="px-lg" style="padding:18px 56px 8px 56px;">
+          <p style="margin:0;font-size:16px;line-height:1.65;color:#C9B79B;">Hi {{contact.first_name}} — quick reminder that we've got your table held for <strong style="color:#F5E7D0;">{{contact.booking_time}}</strong> tomorrow. The kitchen is already prepping for you.</p>
+        </td></tr>
+
+        <tr><td class="px-lg" style="padding:24px 56px 8px 56px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:rgba(212,165,96,0.08);border:1px solid rgba(212,165,96,0.30);border-radius:14px;">
+            <tr><td style="padding:22px 28px;">
+              <p style="margin:0 0 12px 0;font-family:'Courier New',monospace;font-size:10px;letter-spacing:3px;color:#D4A560;">YOUR RESERVATION</p>
+              <p style="margin:0 0 4px 0;font-size:14px;color:#C9B79B;">{{contact.last_booking_date}} &nbsp;·&nbsp; <span style="color:#F5E7D0;">{{contact.booking_time}}</span></p>
+              <p style="margin:0;font-size:14px;color:#C9B79B;">Party of <span style="color:#F5E7D0;">{{contact.party_size}}</span> &nbsp;·&nbsp; Table <span style="color:#F5E7D0;">{{contact.table_label}}</span></p>
+            </td></tr>
+          </table>
+        </td></tr>
+
+        <tr><td class="px-lg" style="padding:24px 56px 0 56px;">
+          <p style="margin:0;font-size:14px;line-height:1.65;color:#C9B79B;">Plans changed? You can still cancel up until tonight. After that, please drop us a reply or give us a call.</p>
+        </td></tr>
+
+        <tr><td class="px-lg" align="center" style="padding:24px 56px 12px 56px;">
+          <a href="{{contact.cancel_link}}" style="display:inline-block;padding:15px 38px;border-radius:9999px;background:transparent;border:1px solid #D4A560;color:#D4A560;font-family:'Courier New',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:600;">View / Cancel</a>
+        </td></tr>
+
+        <tr><td class="px-lg" align="center" style="padding:8px 56px 28px 56px;">
+          <p style="margin:0;font-size:12px;line-height:1.55;color:#8B7E6F;font-style:italic;">"You can taste when a kitchen is afraid of itself. Ours isn't."</p>
+        </td></tr>
+
+        <tr><td style="padding:0 56px;"><div style="height:1px;background:rgba(212,165,96,0.20);"></div></td></tr>
+
+        <tr><td class="px-lg" align="center" style="padding:24px 56px 36px 56px;">
+          <p style="margin:0 0 4px 0;font-size:12px;color:#8B7E6F;">{{location.full_address}}</p>
+          <p style="margin:0;font-size:12px;color:#8B7E6F;">{{location.phone}}</p>
+        </td></tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>

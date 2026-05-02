@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="color-scheme" content="dark">
+<title>Got it — Bistro Bar</title>
+<style>
+  body{margin:0;padding:0;background:#0d0608;}
+  table{border-collapse:collapse;border-spacing:0;}
+  img{display:block;border:0;outline:none;text-decoration:none;}
+  a{color:#D4A560;text-decoration:none;}
+  @media (max-width:620px){
+    .card{width:100%!important;border-radius:0!important;}
+    .px-lg{padding-left:24px!important;padding-right:24px!important;}
+    .h1{font-size:30px!important;line-height:1.1!important;}
+  }
+</style>
+</head>
+<body style="margin:0;padding:0;background:#0d0608;font-family:'Helvetica Neue',Arial,sans-serif;color:#C9B79B;">
+  <span style="display:none;visibility:hidden;opacity:0;color:transparent;height:0;width:0;font-size:1px;line-height:1px;mso-hide:all;">Thanks for the message — we read every one.</span>
+
+  <table role="presentation" width="100%" bgcolor="#0d0608" cellpadding="0" cellspacing="0">
+    <tr><td align="center" style="padding:40px 20px;">
+      <table role="presentation" class="card" width="600" bgcolor="#1A0B0E" cellpadding="0" cellspacing="0" style="border:1px solid rgba(212,165,96,0.3);border-radius:20px;overflow:hidden;">
+
+        <tr><td align="center" style="padding:40px 24px 6px 24px;">
+          <span style="font-family:Georgia,'Playfair Display',serif;font-size:28px;font-style:italic;color:#F5E7D0;letter-spacing:1px;">Bistro&nbsp;Bar</span>
+        </td></tr>
+        <tr><td align="center" style="padding:0 24px 28px 24px;">
+          <span style="font-family:'Courier New',monospace;font-size:10px;letter-spacing:4px;color:#D4A560;">RECEIVED</span>
+        </td></tr>
+
+        <tr><td class="px-lg" style="padding:8px 56px 16px 56px;">
+          <h1 class="h1" style="margin:0;font-family:Georgia,'Playfair Display',serif;font-size:40px;font-weight:300;font-style:italic;line-height:1.05;color:#F5E7D0;">Got it, {{contact.first_name}}.</h1>
+        </td></tr>
+
+        <tr><td class="px-lg" style="padding:18px 56px 8px 56px;">
+          <p style="margin:0;font-size:16px;line-height:1.65;color:#C9B79B;">Thanks for writing in. A real human (not a bot, not a template) is reading what you sent. We'll get back to you within a day, usually faster.</p>
+        </td></tr>
+
+        <tr><td class="px-lg" style="padding:24px 56px 0 56px;">
+          <p style="margin:0 0 12px 0;font-family:'Courier New',monospace;font-size:10px;letter-spacing:3px;color:#D4A560;">WHAT YOU SENT</p>
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:rgba(212,165,96,0.06);border-left:2px solid #D4A560;border-radius:6px;">
+            <tr><td style="padding:18px 22px;">
+              <p style="margin:0;font-size:14px;line-height:1.6;color:#C9B79B;font-style:italic;">{{custom_value.feedback_message}}</p>
+            </td></tr>
+          </table>
+        </td></tr>
+
+        <tr><td class="px-lg" style="padding:24px 56px 0 56px;">
+          <p style="margin:0;font-size:14px;line-height:1.65;color:#C9B79B;">If you wanted to book a table while you wait for our reply — the kitchen happens to be open.</p>
+        </td></tr>
+
+        <tr><td class="px-lg" align="center" style="padding:24px 56px 12px 56px;">
+          <a href="{{custom_value.public_site_url}}/#reserve" style="display:inline-block;padding:15px 38px;border-radius:9999px;background:#D4A560;color:#1A0B0E;font-family:'Courier New',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:600;">Reserve a Table</a>
+        </td></tr>
+
+        <tr><td style="padding:24px 56px 0 56px;"><div style="height:1px;background:rgba(212,165,96,0.20);"></div></td></tr>
+
+        <tr><td class="px-lg" align="center" style="padding:18px 56px 36px 56px;">
+          <p style="margin:0 0 6px 0;font-family:Georgia,serif;font-size:14px;font-style:italic;color:#F5E7D0;">A kitchen on fire. A bar with intent.</p>
+          <p style="margin:0;font-size:12px;color:#8B7E6F;">{{location.phone}} &nbsp;·&nbsp; {{location.full_address}}</p>
+        </td></tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>
